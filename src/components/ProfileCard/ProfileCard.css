@@ -1,0 +1,142 @@
+.profile-card {
+  width: min(420px, calc(100vw - 32px));
+}
+
+@media (min-width: 640px) {
+  .profile-card {
+    width: min(560px, calc(100vw - 32px));
+  }
+}
+
+.profile-card-banner {
+  display: block;
+  width: 100%;
+  aspect-ratio: 736 / 414;
+  object-fit: cover;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.profile-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 24px 26px;
+}
+
+.profile-card-name {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.profile-card-tagline {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+  font-size: 0.8rem;
+}
+
+.profile-card-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-top: 4px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  transition: color 0.15s ease;
+}
+
+.social-icon:hover,
+.social-icon:focus-visible {
+  color: var(--color-accent);
+}
+
+.social-icon:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.social-icon-glyph {
+  width: 30px;
+  height: 30px;
+  background-color: currentColor;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+.achievements-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 10px 20px;
+  border-radius: 16px;
+}
+
+.achievement {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.achievement-dot {
+  color: var(--color-text-muted);
+}
+
+.achievement-gc1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.achievement-gc1:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.achievement-icon {
+  display: block;
+  height: 28px;
+  width: auto;
+}
+
+.achievement-tooltip {
+  position: absolute;
+  top: calc(100% + 18px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
+}
+
+.achievement-gc1:hover .achievement-tooltip,
+.achievement-gc1:focus-visible .achievement-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

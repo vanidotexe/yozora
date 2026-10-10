@@ -1,0 +1,86 @@
+:root {
+  color-scheme: light;
+
+  --color-bg: #ffffff;
+  --color-bg-elevated: #fdf6f8;
+  --color-bg-hover: #fbeaf0;
+
+  --color-text: #2b2130;
+  --color-text-muted: #7a6b74;
+
+  --color-border: #f0dce4;
+
+  --color-accent: #e0729c;
+  --color-accent-hover: #c85a86;
+  --color-accent-text: #ffffff;
+
+  --glass-tint: color-mix(in srgb, var(--color-bg-elevated) 55%, transparent);
+  --glass-border: color-mix(in srgb, var(--color-text) 12%, transparent);
+  --glass-highlight: rgba(255, 255, 255, 0.65);
+  --glass-shadow-color: rgba(43, 33, 48, 0.16);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --color-bg: #121014;
+    --color-bg-elevated: #1c1920;
+    --color-bg-hover: #26212b;
+
+    --color-text: #e8e3ec;
+    --color-text-muted: #e5e0e9;
+
+    --color-border: #2c2733;
+
+    --color-accent: #a58fd6;
+    --color-accent-hover: #b8a4e2;
+    --color-accent-text: #121014;
+
+    --glass-tint: color-mix(in srgb, var(--color-bg-elevated) 45%, transparent);
+    --glass-border: color-mix(in srgb, var(--color-text) 14%, transparent);
+    --glass-highlight: rgba(255, 255, 255, 0.18);
+    --glass-shadow-color: rgba(0, 0, 0, 0.45);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-bg: #121014;
+  --color-bg-elevated: #1c1920;
+  --color-bg-hover: #26212b;
+
+  --color-text: #e8e3ec;
+  --color-text-muted: #e5e0e9;
+
+  --color-border: #2c2733;
+
+  --color-accent: #a58fd6;
+  --color-accent-hover: #b8a4e2;
+  --color-accent-text: #121014;
+
+  --glass-tint: color-mix(in srgb, var(--color-bg-elevated) 45%, transparent);
+  --glass-border: color-mix(in srgb, var(--color-text) 14%, transparent);
+  --glass-highlight: rgba(255, 255, 255, 0.18);
+  --glass-shadow-color: rgba(0, 0, 0, 0.45);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100dvh;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Montserrat', system-ui, sans-serif;
+}
